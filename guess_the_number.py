@@ -13,11 +13,11 @@ while True:
         
         if guessed_num<random_int:
             print("-"*37)
-            print("Your guess is too low then the number")
+            print("Your guess is low then the number")
         
         elif guessed_num>random_int:
             print("-"*38)
-            print("Your guess is too high then the number")
+            print("Your guess is high then the number")
             
         elif guessed_num==random_int:
             print(f'CONGRATULATION !!!\nyou got the correct guessing "{random_int}"')
