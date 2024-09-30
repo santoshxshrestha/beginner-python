@@ -1,30 +1,57 @@
-print("Welcome to the simple calculator")
-print("\n")
+tasks=[]
+def addTask():
+    task=input("please enter a task:")
+    tasks.append(task)
+    print(f"Task '{task}' added to the list.")
 
-print("select an operation to perform")
-print('-'*30)
-print(" 1.ADD \n 2.SUBTRACT \n 3.MULTIPLY \n 4.DIVIDE")
+    
+def listTask():
+    if not tasks:
+        print('there are no task currently.')
+    else:
+        print('current tasks: ')
+        for index, task in enumerate(tasks):
+            print(f"Task #{index}. {task}")
+
+
+def deleteTask():
+    listTask()
+    try:
+        taskToDelete = int(input('enter the # to delete: '))
+        if taskToDelete >=0 and taskToDelete < len(tasks):
+            tasks.pop(taskToDelete)
+            print(f"Task {taskToDelete} has been removed.")
+
+        else:
+            print(f"Task #{taskToDelete} was not found.")
+    except:
+        print("invalid input.")
+if __name__=="__main__":
+    print("welcome to the to do list app")
+    while True:
+        print("\n")
+        print("You can select one of the folling options.")
+        print("-"*42)
+        print("1. Add a new task")
+        print("2. Delete a task")
+        print("3. List tasks")
+        print("4. Quit")
+        break
+
 while True:
-    try:
-        operation = int(input("Select an operation from above (1-4): "))
-        if operation < 1 or operation > 4:
-            print("Invalid selection, please select a valid operation.")
-            continue
-        break  # Exit loop once a valid operation is chosen
-    except ValueError:
-        print("Invalid input! Please enter a number between 1 and 4.")
+        choice = input("enter your choice: ")
 
-num1 = int(input("enter your first number: "))
-num2 = int(input("enter your second number: "))
+        if (choice=="1"):
+            addTask()
 
-if operation==1:
-    print(f"sum of two numbers '{num1}' and '{num2}' is: ", num1 + num2)
-elif operation==2:
-    print(f"subtraction of two numbers '{num2}' from '{num1}' is: ",num1 - num2)
-elif operation==3:
-    print(f"product of two numbers '{num1}' and '{num2}' is: ",num1 * num2)
-elif operation==4:
-    try:
-        print(f"division of two numbers '{num1}' by '{num2}' is: ",num1 / num2)
-    except ZeroDivisionError:
-         print("invalid input, you got zero division error!!!")
+        elif (choice=="2"):
+            deleteTask()
+
+        elif (choice=="3"):
+            listTask()
+        elif (choice=="4"):
+            break
+        else:
+            print("invalid input, please try again")
+
+print("Good bye")
