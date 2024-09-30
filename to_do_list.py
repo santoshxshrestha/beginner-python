@@ -30,7 +30,7 @@ if __name__=="__main__":
     print("welcome to the to do list app")
     while True:
         print("\n")
-        print("You can select one of the folling options.")
+        print("You can select one of the following options.")
         print("-"*42)
         print("1. Add a new task")
         print("2. Delete a task")
