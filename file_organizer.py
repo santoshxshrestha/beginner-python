@@ -27,6 +27,7 @@ def organize_files(directory):
                 shutil.move(os.path.join(directory, filename), os.path.join(folder_path, filename))
                 print(f"Moved{filename} to {folder_name}")
                 break
-
-
-print("Your files have been orgainzed sucessfully")
+            print("Your files have been orgainzed sucessfully") 
+               
+directory = input("Enter the directory that you want to organize: " )
+organize_files(directory)
