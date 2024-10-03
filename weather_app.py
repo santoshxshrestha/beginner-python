@@ -26,4 +26,3 @@ if __name__ == "__main__":
     api_key = '08f05e346ce847f630cc2a04c0a464d6'
     city = input("Enter your city name: ")
     get_weather(city, api_key)
-
