@@ -2,13 +2,18 @@ import os
 import shutil
 
 file_types = {
-    'Images': ['.jpg', '.png', '.gif', '.tif', '.bmp', '.eps'],
-    'Documents': ['.txt', '.rtf', '.docx', '.csv', '.doc', '.wps'],
-    'Video': ['.mp4', '.avi', '.mkv', '.mov', '.wmv'],
-    'Audio': ['.mp3', '.wav', '.aac', '.flac', '.ogg'],
-    'Archives': ['.zip', '.rar', '.tar', '.gz', '.7z'],
-    'Code': ['.py', '.java', '.c', '.cpp', '.js', '.html', '.css'],
+    'Images': ['.jpg', '.png', '.gif', '.tif', '.bmp', '.eps', '.svg', '.webp', '.heic'],
+    'Documents': ['.txt', '.rtf', '.docx', '.csv', '.doc', '.wps', '.pdf', '.odt', '.xlsx', '.pptx', '.ppt', '.epub'],
+    'Video': ['.mp4', '.avi', '.mkv', '.mov', '.wmv', '.flv', '.webm', '.mpeg', '.3gp'],
+    'Audio': ['.mp3', '.wav', '.aac', '.flac', '.ogg', '.m4a', '.wma', '.alac'],
+    'Archives': ['.zip', '.rar', '.tar', '.gz', '.7z', '.iso', '.bz2', '.xz'],
+    'Code': ['.py', '.java', '.c', '.cpp', '.js', '.html', '.css', '.php', '.xml', '.json', '.rb', '.sql', '.sh', '.swift'],
+    'Executables': ['.exe', '.bat', '.sh', '.app', '.msi', '.apk'],
+    'Fonts': ['.ttf', '.otf', '.woff', '.woff2', '.eot'],
+    'Spreadsheets': ['.xls', '.xlsx', '.ods'],
+    'Presentations': ['.ppt', '.pptx', '.odp'],
 }
+
 
 def organize_files(directory):
     if not os.path.exists(directory):
