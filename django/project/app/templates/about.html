@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -32,6 +33,18 @@
       >
     </nav>
     <!-- thsi is the bootstrap template -->
+
+    <!-- images here from the boot strap -->
+    <img
+      src="{% static 'images/code.jpg' %}"
+      class="rounded float-start"
+      alt="this is code .jpg"
+    />
+    <img
+      src="{% static 'images/web.jpg' %}"
+      class="rounded float-end"
+      alt="this is web.jpg"
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
