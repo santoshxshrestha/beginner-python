@@ -12,6 +12,8 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!-- custom css should be below bootstrap css -->
+    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
   </head>
   <body>
     <!-- this is just a nav bar from the boot strap  -->
@@ -38,11 +40,13 @@
     <img
       src="{% static 'images/code.jpg' %}"
       class="rounded float-start"
+      id="code"
       alt="this is code .jpg"
     />
     <img
       src="{% static 'images/web.jpg' %}"
       class="rounded float-end"
+      id="web"
       alt="this is web.jpg"
     />
     <script
