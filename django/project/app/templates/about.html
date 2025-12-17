@@ -1,58 +1,67 @@
 <!doctype html>
 {% load static %}
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!-- this is another bootstrap template -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <!-- custom css should be below bootstrap css -->
-    <link rel="stylesheet" href="{% static 'css/about.css' %}" />
-  </head>
-  <body>
-    <!-- this is just a nav bar from the boot strap  -->
-    <nav class="nav nav-pills flex-column flex-sm-row">
-      <a
-        class="flex-sm-fill text-sm-center nav-link active"
-        aria-current="page"
-        href="#"
-        >Active</a
-      >
-      <a class="flex-sm-fill text-sm-center nav-link" href="#"
-        >Longer nav link</a
-      >
-      <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
-      <a
-        class="flex-sm-fill text-sm-center nav-link disabled"
-        aria-disabled="true"
-        >Disabled</a
-      >
-    </nav>
-    <!-- thsi is the bootstrap template -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- this is another bootstrap template -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <!-- custom css should be below bootstrap css -->
+        <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+    </head>
+    <body>
+        <!-- this is just a nav bar from the boot strap  -->
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a
+                class="flex-sm-fill text-sm-center nav-link active"
+                aria-current="page"
+                href="#"
+            >Active</a
+            >
+            <a class="flex-sm-fill text-sm-center nav-link" href="#"
+            >Longer nav link</a
+            >
+            <a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+            <a
+                class="flex-sm-fill text-sm-center nav-link disabled"
+                aria-disabled="true"
+            >Disabled</a
+            >
+        </nav>
+        <!-- thsi is the bootstrap template -->
 
-    <!-- images here from the boot strap -->
-    <img
-      src="{% static 'images/code.jpg' %}"
-      class="rounded float-start"
-      id="code"
-      alt="this is code .jpg"
-    />
-    <img
-      src="{% static 'images/web.jpg' %}"
-      class="rounded float-end"
-      id="web"
-      alt="this is web.jpg"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
+        <!-- carousel image  here from the boot strap -->
+        <div id="carouselExample" class="carousel slide">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/code.jpg' %}" class="d-block w-100" alt="code.jpg">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="{% static 'images/web.jpg' %}" class="d-block w-100" alt="web.jpg">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image/binary.jpg' %}" class="d-block w-100" alt="binary.jpg">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
     ></script>
-  </body>
+    </body>
 </html>
