@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from .models import Cources
+from .models import Form
 
 # Create your views here.
 
@@ -23,5 +24,6 @@ def form(request):
             password=password
         )
         form_entry.save()
+        return HttpResponse("Form submitted successfully!")
 
     return render(request, 'form.html')
