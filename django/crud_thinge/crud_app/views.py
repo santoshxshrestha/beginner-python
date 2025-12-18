@@ -7,3 +7,7 @@ from .models import Cources
 def home(request):
     data = Cources.objects.all()
     return render(request, 'home.html', {'data': data})
+
+
+def form(request):
+    return render(request, 'form.html')
