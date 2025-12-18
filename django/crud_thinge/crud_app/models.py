@@ -5,4 +5,6 @@ from django.db import models
 
 class Cources(models.model):
     image = models.ImageField(upload_to='images/')
-    name = models.CharField(max_length=100)
+    title = models.CharField(max_length=20)
+    description = models.TextField()
+    price = models.IntegerField()
