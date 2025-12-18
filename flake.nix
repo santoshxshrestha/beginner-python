@@ -35,6 +35,7 @@
           python3Packages.numpy
           python3Packages.pandas
           python3Packages.django
+          python3Packages.pillow
         ];
 
         shellHook = ''
