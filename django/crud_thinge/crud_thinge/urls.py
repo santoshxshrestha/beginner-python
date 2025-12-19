@@ -25,5 +25,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("",  views.home),
     path("form/",  views.form, name="form"),
-    path("delete/",  views.delete_content, name="form"),
+    path("delete/",  views.delete_content_page, name="form"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -29,8 +29,8 @@
           <td>{{obj.name}}</td>
           <td>{{obj.email}}</td>
           <td>{{obj.password}}</td>
-          <button type="button" class="btn btn-primary">edit</button>
-          <button type="button" class="btn btn-danger">delete</button>
+                    <td><button type="button" class="btn btn-primary" value="{{obj.id}}">edit</button></td>
+                    <td><button type="button" class="btn btn-danger" value="{{obj.id}}">delete<g/button></td>
         </tr>
         {% endfor %}
       </tbody>

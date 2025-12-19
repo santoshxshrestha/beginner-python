@@ -29,8 +29,9 @@ def form(request):
     return render(request, 'form.html')
 
 
-def delete_content(request):
-    return render(request, 'delete_content.html')
+def delete_content_page(request):
+    data = Form.objects.all()
+    return render(request, 'delete_content.html', {'data': data})
 
 
 def delete_course(request, course_id):
