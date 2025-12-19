@@ -16,4 +16,3 @@ class Form(models.Model):
     message = models.TextField()
     password = models.CharField(max_length=20)
 
-

@@ -16,31 +16,23 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">primary key</th>
+          <th scope="col">name</th>
+          <th scope="col">email</th>
+          <th scope="col">password</th>
         </tr>
       </thead>
       <tbody>
+        {% for obj in data %}
         <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <th scope="row">{{ obj.id }}</th>
+          <td>{{obj.name}}</td>
+          <td>{{obj.email}}</td>
+          <td>{{obj.password}}</td>
+          <button type="button" class="btn btn-primary">edit</button>
+          <button type="button" class="btn btn-danger">delete</button>
         </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>John</td>
-          <td>Doe</td>
-          <td>@social</td>
-        </tr>
+        {% endfor %}
       </tbody>
     </table>
 
