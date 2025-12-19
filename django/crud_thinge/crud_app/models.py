@@ -15,3 +15,5 @@ class Form(models.Model):
     email = models.EmailField()
     message = models.TextField()
     password = models.CharField(max_length=20)
+
+

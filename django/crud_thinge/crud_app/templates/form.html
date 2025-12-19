@@ -1,87 +1,123 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    {% load static %}
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>form</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <ul class="nav nav-pills">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="/admin">Admin</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/">home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-      </li>
-    </ul>
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>form</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+            integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+    </head>
+    <body>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/admin">Admin</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/">home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+        </ul>
 
-    <div class="container">
-      <form
-        method="POST"
-        enctype="multipart/form-data"
-        action="{% url 'form' %}"
-      >
-        {% csrf_token %}
-        <div class="mb-3">
-          <label for="exampleInputEmemail1" class="form-label"
-            >Email address</label
-          >
-          <input
-            name="email"
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            we'll always sell you email to third parties.
-          </div>
+
+
+        <div class="container">
+
+            <form
+                method="POST"
+                enctype="multipart/form-data"
+                action="{% url 'form' %}"
+            >
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="exampleInputEmemail1" class="form-label"
+                    >Email address</label
+                    >
+                    <input
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        id="exampleInputEmail1"
+                        aria-describedby="emailHelp"
+                    />
+                    <div id="emailHelp" class="form-text">
+                        we'll always sell you email to third parties.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputname" class="form-label">Username</label>
+                    <input
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                    />
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input
+                        name="password"
+                        type="password"
+                        class="form-control"
+                        id="exampleInputPassword1"
+                    />
+                </div>
+                <label for="message"> Message </label>
+                <input name="message" type="text" class="form-control" />
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputname" class="form-label">Username</label>
-          <input
-            name="name"
-            type="text"
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-          <label for="exampleInputPassword1" class="form-label">Password</label>
-          <input
-            name="password"
-            type="password"
-            class="form-control"
-            id="exampleInputPassword1"
-          />
-        </div>
-        <label for="message"> Message </label>
-        <input name="message" type="text" class="form-control" />
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
+
+        <table class="table">
+            <thead>
+                {% for i in data %}
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Firstth>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>@social</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"
     ></script>
-  </body>
+    </body>
 </html>

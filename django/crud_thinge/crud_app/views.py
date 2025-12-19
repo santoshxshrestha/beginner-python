@@ -27,3 +27,13 @@ def form(request):
         return HttpResponse("Form submitted successfully!")
 
     return render(request, 'form.html')
+
+
+def delete_content(request):
+    return render(request, 'delete_content.html')
+
+
+def delete_course(request, course_id):
+    course = Cources.objects.get(id=course_id)
+    course.delete()
+    return HttpResponse("Course deleted successfully!")
