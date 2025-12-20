@@ -30,7 +30,7 @@
           <td>{{obj.email}}</td>
           <td>{{obj.password}}</td>
                     <td><button type="button" class="btn btn-primary" value="{{obj.id}}">edit</button></td>
-                    <td><button type="button" class="btn btn-danger" value="{{obj.id}}">delete<g/button></td>
+                    <td><a href="{% url 'delete_content' obj.id %}"<button type="button" class="btn btn-danger">delete<g/button></a></td>
         </tr>
         {% endfor %}
       </tbody>

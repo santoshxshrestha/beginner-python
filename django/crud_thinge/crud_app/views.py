@@ -1,4 +1,4 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render, HttpResponse, redirect
 from .models import Cources
 from .models import Form
 
@@ -32,6 +32,12 @@ def form(request):
 def delete_content_page(request):
     data = Form.objects.all()
     return render(request, 'delete_content.html', {'data': data})
+
+
+def delete_content(request, id):
+    form_entry = Form.objects.get(id=id)
+    form_entry.delete()
+    return redirect('delete')
 
 
 def delete_course(request, course_id):
