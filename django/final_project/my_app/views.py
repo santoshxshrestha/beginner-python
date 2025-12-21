@@ -17,7 +17,7 @@ def home(request):
         form = StudentForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('home')
+            return redirect('students')
     else:
         form = StudentForm()
     data = Student.objects.all()
@@ -43,10 +43,10 @@ def update_data(request, student_id):
         student.age = request.POST.get("age")
         student.address = request.POST.get("address")
         student.save()
-    return redirect('home')
+    return redirect('students')
 
 
 def delete_data(request, student_id):
     student = Student.objects.get(id=student_id)
     student.delete()
-    return redirect('home')
+    return redirect('students')
