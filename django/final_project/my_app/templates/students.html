@@ -18,19 +18,12 @@
             <div class="container-fluid">
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link active" href="{% url 'home' %}">Home</a>
-                        <a class="nav-link" href="{% url 'students' %}">Students</a>
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link active" href="{% url 'students' %}">Students</a>
                     </div>
                 </div>
             </div>
         </nav>
-        <h2>Add New Student</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="btn btn-primary">Add Student</button>
-        </form>
-        <h2>Students List</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -51,6 +44,10 @@
                     <td>{{ student.email }}</td>
                     <td>{{ student.age }}</td>
                     <td>{{ student.address }}</td>
+                    <td>
+                        <a href="{% url 'edit_data' student.id %}" class="btn btn-success">Edit</a>
+                        <a href="{% url 'delete_data' student.id %}" class="btn btn-danger">Delete</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
